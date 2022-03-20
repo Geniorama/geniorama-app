@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produccion_bolsas_de_horas",
+  "info": {
+    "singularName": "produccion-bolsa-de-horas",
+    "pluralName": "produccion-bolsas-de-horas",
+    "displayName": "Producción bolsas de horas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "inicio": {
+      "type": "datetime"
+    },
+    "fin": {
+      "type": "datetime"
+    },
+    "resuelto": {
+      "type": "boolean"
+    },
+    "servicios_bolsas_de_hora": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::servicio-bolsas-de-horas.servicio-bolsas-de-horas",
+      "inversedBy": "produccion_bolsas_de_horas"
+    }
+  }
+}

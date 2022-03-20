@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accesos",
+  "info": {
+    "singularName": "acceso",
+    "pluralName": "accesos",
+    "displayName": "Accesos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plataforma": {
+      "type": "string"
+    },
+    "url_inicio_sesion": {
+      "type": "string"
+    },
+    "email_usuario": {
+      "type": "email"
+    },
+    "activo": {
+      "type": "boolean"
+    },
+    "dominio": {
+      "type": "string"
+    },
+    "nombre_usuario": {
+      "type": "string"
+    },
+    "Clave": {
+      "type": "string"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "accesos"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicios_bolsas_de_horas",
+  "info": {
+    "singularName": "servicio-bolsas-de-horas",
+    "pluralName": "servicios-bolsas-de-horas",
+    "displayName": "Servicios bolsas de horas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bolsas_de_horas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bolsa-de-horas.bolsa-de-horas",
+      "mappedBy": "servicios_bolsas_de_hora"
+    },
+    "fecha_inicio": {
+      "type": "date"
+    },
+    "activo": {
+      "type": "boolean"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "servicios_bolsas_de_horas"
+    },
+    "Titulo": {
+      "type": "string"
+    },
+    "produccion_bolsas_de_horas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produccion-bolsa-de-horas.produccion-bolsa-de-horas",
+      "mappedBy": "servicios_bolsas_de_hora"
+    }
+  }
+}

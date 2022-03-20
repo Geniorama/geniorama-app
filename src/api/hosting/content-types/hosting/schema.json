@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hostings",
+  "info": {
+    "singularName": "hosting",
+    "pluralName": "hostings",
+    "displayName": "Hosting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_plan": {
+      "type": "string"
+    },
+    "almacenamiento_ssd": {
+      "type": "string"
+    },
+    "ancho_banda_mes": {
+      "type": "string"
+    },
+    "max_cuentas_email": {
+      "type": "integer"
+    },
+    "max_capacidad_por_email": {
+      "type": "string"
+    },
+    "cpanel": {
+      "type": "boolean"
+    },
+    "max_bases_datos": {
+      "type": "integer"
+    },
+    "max_dominios_adicionales": {
+      "type": "integer"
+    },
+    "max_subdominios": {
+      "type": "integer"
+    },
+    "wordpress": {
+      "type": "boolean"
+    },
+    "valor_mensual": {
+      "type": "decimal"
+    },
+    "valor_anual": {
+      "type": "decimal"
+    }
+  }
+}

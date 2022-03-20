@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Clientes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_empresa": {
+      "type": "string"
+    },
+    "nombre_contacto": {
+      "type": "string"
+    },
+    "email_contacto": {
+      "type": "email"
+    },
+    "direccion_empresa": {
+      "type": "string"
+    },
+    "accesos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::acceso.acceso",
+      "mappedBy": "cliente"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "servicios_bolsas_de_horas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio-bolsas-de-horas.servicio-bolsas-de-horas",
+      "mappedBy": "cliente"
+    }
+  }
+}

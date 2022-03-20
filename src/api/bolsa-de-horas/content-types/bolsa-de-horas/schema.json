@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bolsas_de_horas",
+  "info": {
+    "singularName": "bolsa-de-horas",
+    "pluralName": "bolsas-de-horas",
+    "displayName": "Bolsas de horas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cantidad_horas": {
+      "type": "integer"
+    },
+    "valor": {
+      "type": "decimal"
+    },
+    "nombre_paquete": {
+      "type": "string"
+    },
+    "servicios_bolsas_de_hora": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::servicio-bolsas-de-horas.servicio-bolsas-de-horas",
+      "inversedBy": "bolsas_de_horas"
+    }
+  }
+}
