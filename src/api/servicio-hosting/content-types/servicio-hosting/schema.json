@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicios_hosting",
+  "info": {
+    "singularName": "servicio-hosting",
+    "pluralName": "servicios-hosting",
+    "displayName": "Servicios Hosting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "servicios_hostings"
+    },
+    "hosting": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hosting.hosting"
+    },
+    "fecha_inicio": {
+      "type": "date"
+    },
+    "proximo_vencimiento": {
+      "type": "date"
+    },
+    "valor_renovacion": {
+      "type": "decimal"
+    },
+    "dominio": {
+      "type": "string"
+    }
+  }
+}

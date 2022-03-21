@@ -46,6 +46,12 @@
       "relation": "oneToMany",
       "target": "api::servicio-bolsas-de-horas.servicio-bolsas-de-horas",
       "mappedBy": "cliente"
+    },
+    "servicios_hostings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio-hosting.servicio-hosting",
+      "mappedBy": "cliente"
     }
   }
 }
